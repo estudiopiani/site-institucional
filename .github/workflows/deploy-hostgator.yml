@@ -1,0 +1,40 @@
+name: 🚀 Publicar no site (Hostgator)
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmacao:
+        description: 'Digite SIM para confirmar a publicação da versão atual (main) no site'
+        required: true
+        default: ''
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Verificar confirmação
+        run: |
+          if [ "${{ github.event.inputs.confirmacao }}" != "SIM" ]; then
+            echo "Publicação cancelada: digite SIM no campo de confirmação para publicar."
+            exit 1
+          fi
+          echo "Confirmado. Publicando a versão atual do branch main..."
+
+      - name: Publicar via FTP na Hostgator
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: ./
+          server-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/node_modules/**

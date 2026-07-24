@@ -276,8 +276,11 @@ footer.site-footer{background:var(--profundo);padding:48px 0 24px;}
 .hero-title .accent svg{position:absolute;left:0;bottom:-10px;width:100%;height:14px;}
 .hero-subtitle{font-size:14px;font-style:italic;color:var(--ink-600);max-width:360px;line-height:1.6;}
 .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;padding:20px 0;}
-.hero-visual .img-box{width:200px;height:200px;border-radius:44px;}
-@media(min-width:800px){ .hero-visual .img-box{width:230px;height:230px;} }
+.hero-visual--tight{justify-content:center;}
+@media(min-width:800px){ .hero-visual--tight{justify-content:flex-start;} }
+.visual-wrap{position:relative;width:100%;max-width:260px;}
+.visual-wrap .img-box{width:100%;aspect-ratio:1/1;border-radius:44px;}
+@media(min-width:800px){ .visual-wrap{max-width:280px;} }
 
 .section-title{font-size:22px;margin-bottom:14px;}
 @media(min-width:800px){ .section-title{font-size:26px;} }
@@ -379,11 +382,13 @@ footer.site-footer{background:var(--profundo);padding:48px 0 24px;}
         </h1>
         <p class="hero-subtitle">Travou porque, sozinha, é quase impossível enxergar onde está o problema.</p>
       </div>
-      <div class="hero-visual">
-        <div class="img-box img-box--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></div>
-        <div class="floating-badge" style="bottom:-8px;left:0;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-          <div><strong>R$10 mil → R$100 mil</strong><span>Case Ok Vibes</span></div>
+      <div class="hero-visual hero-visual--tight">
+        <div class="visual-wrap">
+          <div class="img-box img-box--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></div>
+          <div class="floating-badge" style="bottom:-12px;left:-12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <div><strong>R$10 mil → R$100 mil</strong><span>Case Ok Vibes</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -420,11 +425,13 @@ footer.site-footer{background:var(--profundo);padding:48px 0 24px;}
 <section class="section">
   <div class="container">
     <div class="split">
-      <div class="hero-visual" style="padding:0;">
-        <div class="img-box" style="width:100%;max-width:300px;aspect-ratio:auto;height:220px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></div>
-        <div class="floating-badge" style="bottom:-14px;right:0;left:auto;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          <strong>@lojaokvibes</strong>
+      <div class="hero-visual hero-visual--tight" style="padding:0;">
+        <div class="visual-wrap" style="max-width:300px;">
+          <div class="img-box" style="width:100%;height:220px;aspect-ratio:auto;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></div>
+          <div class="floating-badge" style="bottom:-14px;right:-12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <strong>@lojaokvibes</strong>
+          </div>
         </div>
       </div>
       <div>

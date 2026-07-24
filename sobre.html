@@ -98,10 +98,13 @@ header.site-header{
   display:flex;align-items:center;justify-content:space-between;
   padding:16px 24px;max-width:1180px;margin:0 auto;gap:16px;
 }
+@media(min-width:900px){
+  .header-inner{display:grid;grid-template-columns:auto 1fr auto;}
+}
 .logo{display:flex;align-items:center;flex-shrink:0;}
 .logo img{height:28px;width:auto;}
 nav.main-nav{display:none;}
-.nav-links{display:flex;align-items:center;gap:2px;}
+.nav-links{display:flex;align-items:center;justify-content:center;gap:2px;}
 .nav-links a{
   padding:9px 16px;border-radius:var(--radius-pill);
   font-size:13px;font-weight:500;color:var(--ink-600);

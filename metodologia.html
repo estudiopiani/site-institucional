@@ -276,8 +276,11 @@ footer.site-footer{background:var(--profundo);padding:48px 0 24px;}
 .hero-title .accent svg{position:absolute;left:0;bottom:-10px;width:100%;height:14px;}
 .hero-subtitle{font-size:14px;font-style:italic;color:var(--ink-600);max-width:360px;line-height:1.6;}
 .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;padding:20px 0;}
-.hero-visual .img-box{width:200px;height:200px;border-radius:44px;}
-@media(min-width:800px){ .hero-visual .img-box{width:230px;height:230px;} }
+.hero-visual--tight{justify-content:center;}
+@media(min-width:800px){ .hero-visual--tight{justify-content:flex-start;} }
+.visual-wrap{position:relative;width:100%;max-width:260px;}
+.visual-wrap .img-box{width:100%;aspect-ratio:1/1;border-radius:44px;}
+@media(min-width:800px){ .visual-wrap{max-width:280px;} }
 
 .section-title{font-size:22px;margin-bottom:14px;}
 @media(min-width:800px){ .section-title{font-size:26px;} }

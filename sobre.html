@@ -152,12 +152,10 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;}
 /* Diferencial */
 .sb-dif{background:var(--branco);padding:clamp(56px,8vw,100px) 0;}
 .sb-dif-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;}
-@media(min-width:840px){.sb-dif-grid{grid-template-columns:minmax(0,884px) minmax(0,140px);justify-content:center;gap:56px;}}
-.sb-dif-icons{display:flex;flex-direction:column;align-items:center;gap:8px;}
-.sb-dif-icon{width:54px;height:54px;background:var(--ink-50);border-radius:14px;display:flex;align-items:center;justify-content:center;opacity:.6;}
-.sb-dif-icon svg{width:24px;height:24px;color:var(--ink-400);}
-.sb-dif-icon--main{width:64px;height:64px;background:var(--blue-tint);border:2px solid var(--azul);opacity:1;}
-.sb-dif-icon--main svg{width:28px;height:28px;color:var(--azul);}
+@media(min-width:840px){.sb-dif-grid{grid-template-columns:minmax(0,860px) minmax(0,170px);justify-content:center;gap:50px;}}
+.sb-dif-cloud{position:relative;width:170px;height:170px;flex-shrink:0;}
+.sb-dif-chip{position:absolute;background:var(--branco);border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);}
+.sb-dif-chip svg{color:var(--azul);width:46%;height:46%;}
 .sb-dif-line{width:2px;height:18px;background:var(--ink-200);}
 
 /* Compromisso */
@@ -249,10 +247,12 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;}
         <h2 class="sb-h2">A gente olha onde ninguém mais olha</h2>
         <p class="sb-body">A maioria dos profissionais de marketing entra numa marca travada e olha apenas pro tráfego pago, porque é o mais fácil de vender como solução rápida. A gente faz o oposto: entendemos que o problema pode estar em qualquer lugar da operação, inclusive dentro do próprio tráfego, e temos o olhar treinado pra identificar onde está o problema, e a experiência pra resolver.</p>
       </div>
-      <div class="sb-dif-icons">
-        <div class="sb-dif-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15v-4a2 2 0 0 1 4 0v4M7 13h4"/><path d="M17 9v6h-1.5a1.5 1.5 0 0 1 0-3H17"/></svg></div>
-        <div class="sb-dif-line"></div>
-        <div class="sb-dif-icon sb-dif-icon--main"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      <div class="sb-dif-cloud">
+        <div class="sb-dif-chip" style="width:54px;height:54px;border-radius:16px;top:6px;left:58px;opacity:1;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.7-.7 1.7-1.6 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1 0-.9.7-1.6 1.6-1.6h1.9c3 0 5.6-2.6 5.6-5.6C22 6.5 17.5 2 12 2Z"/></svg></div>
+        <div class="sb-dif-chip" style="width:40px;height:40px;top:0;left:0;opacity:.7;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <div class="sb-dif-chip" style="width:44px;height:44px;top:52px;left:118px;opacity:.85;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></div>
+        <div class="sb-dif-chip" style="width:38px;height:38px;top:100px;left:20px;opacity:.6;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M2 20h20"/></svg></div>
+        <div class="sb-dif-chip" style="width:48px;height:48px;top:118px;left:90px;opacity:.9;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15v-4a2 2 0 0 1 4 0v4M7 13h4"/><path d="M17 9v6h-1.5a1.5 1.5 0 0 1 0-3H17"/></svg></div>
       </div>
     </div>
   </div>

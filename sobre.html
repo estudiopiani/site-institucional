@@ -114,8 +114,8 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;}
 .sb-fundador-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;}
 @media(min-width:840px){.sb-fundador-grid{grid-template-columns:minmax(0,160px) minmax(0,864px);justify-content:center;gap:56px;}}
 .sb-avatar-wrap{position:relative;width:160px;height:160px;margin:0 auto;}
-.sb-avatar{width:100%;height:100%;aspect-ratio:1/1;background:var(--areia);border-radius:32px;display:flex;align-items:center;justify-content:center;color:var(--areia-escura);}
-.sb-avatar svg{width:40%;height:40%;}
+.sb-avatar{width:100%;height:100%;aspect-ratio:1/1;background:var(--areia);border-radius:32px;overflow:hidden;}
+.sb-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
 .sb-avatar-badge{position:absolute;bottom:-8px;right:-8px;width:38px;height:38px;background:var(--dourado);border-radius:50%;display:flex;align-items:center;justify-content:center;border:3px solid var(--branco);}
 .sb-avatar-badge svg{width:17px;height:17px;color:var(--profundo);}
 .sb-h2{font-size:clamp(24px,2.8vw,32px);font-weight:700;line-height:1.15;color:var(--profundo);letter-spacing:-.02em;margin:0 0 6px;}
@@ -188,7 +188,7 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;}
   <div class="container">
     <div class="sb-fundador-grid">
       <div class="sb-avatar-wrap">
-        <div class="sb-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></div>
+        <div class="sb-avatar"><img src="assets/team/carlos-andre.jpg" alt="Carlos André, fundador da Piani"></div>
         <div class="sb-avatar-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 20 1.5-9L8 15l4-8 4 8 4.5-4L22 20Z"/></svg></div>
       </div>
       <div>

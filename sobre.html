@@ -102,12 +102,19 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;}
 /* Origem */
 .sb-origem{background:var(--areia);padding:clamp(56px,8vw,100px) 0;}
 .sb-origem-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center;}
-@media(min-width:840px){.sb-origem-grid{grid-template-columns:minmax(0,870px) minmax(0,178px);justify-content:center;gap:32px;}}
+@media(min-width:840px){.sb-origem-grid{grid-template-columns:minmax(0,850px) minmax(0,202px);justify-content:center;gap:28px;}}
 .sb-h1{font-size:clamp(28px,3.6vw,40px);font-weight:700;line-height:1.2;color:var(--profundo);letter-spacing:-.02em;margin-bottom:20px;}
 .sb-h1 .accent{color:var(--azul);}
 .sb-origem-visual{display:flex;justify-content:center;}
-.sb-flag-badge{width:100%;max-width:340px;aspect-ratio:1/1;background:var(--branco);border-radius:32px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg);}
-.sb-flag-badge svg{width:15%;height:15%;color:var(--azul);}
+.sb-timeline{display:flex;flex-direction:column;gap:24px;position:relative;padding-left:8px;}
+.sb-timeline::before{content:"";position:absolute;left:21px;top:20px;bottom:20px;width:2px;background:var(--areia-escura);}
+.sb-tl-item{display:flex;align-items:center;gap:12px;position:relative;z-index:1;}
+.sb-tl-icon{width:44px;height:44px;background:var(--branco);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);flex-shrink:0;}
+.sb-tl-icon svg{width:20px;height:20px;color:var(--azul);}
+.sb-tl-item span{font-size:14px;color:var(--ink-600);font-weight:600;white-space:nowrap;}
+.sb-tl-item.active .sb-tl-icon{background:var(--dourado);box-shadow:var(--shadow-md);}
+.sb-tl-item.active .sb-tl-icon svg{color:var(--profundo);}
+.sb-tl-item.active span{color:var(--profundo);font-weight:700;}
 
 /* Fundador */
 .sb-fundador{background:var(--branco);padding:clamp(48px,7vw,84px) 0;}
@@ -178,7 +185,10 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;}
         <p class="sb-body">Fazemos marketing digital para a dona de marca autoral com e-commerce de produto físico sem empurrar tráfego pago como solução mágica, e sem esquecer que por trás da marca tem uma pessoa sustentando um sonho.</p>
       </div>
       <div class="sb-origem-visual">
-        <div class="sb-flag-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
+        <div class="sb-timeline">
+          <div class="sb-tl-item"><div class="sb-tl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div><span>Dezembro de 2021</span></div>
+          <div class="sb-tl-item active"><div class="sb-tl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><span>Hoje</span></div>
+        </div>
       </div>
     </div>
   </div>

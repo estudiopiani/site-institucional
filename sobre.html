@@ -131,6 +131,7 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;border-top:1px
 .sb-h1{font-size:clamp(28px,3.6vw,40px);font-weight:700;line-height:1.2;color:var(--profundo);letter-spacing:-.02em;margin-bottom:20px;}
 .sb-h1 .accent{color:var(--azul);}
 .sb-origem-visual{display:flex;justify-content:center;}
+@media(max-width:839px){.sb-origem-grid > div:first-child{text-align:center;}}
 .sb-timeline{display:flex;flex-direction:column;gap:20px;position:relative;padding-left:8px;}
 .sb-timeline::before{content:"";position:absolute;left:34px;top:40px;height:8px;width:2px;background:var(--areia-escura);}
 .sb-timeline::after{content:"";position:absolute;left:34px;top:102px;height:8px;width:2px;background:var(--areia-escura);}
@@ -157,6 +158,7 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;border-top:1px
 .sb-fundador-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;}
 @media(min-width:840px){.sb-fundador-grid{grid-template-columns:minmax(0,340px) minmax(0,684px);justify-content:center;gap:56px;}}
 .sb-avatar-wrap{position:relative;width:100%;max-width:340px;aspect-ratio:1/1;margin:0 auto;}
+@media(max-width:839px){.sb-fundador-grid > div:last-child{text-align:center;}}
 .sb-avatar{width:100%;height:100%;aspect-ratio:1/1;background:var(--areia);border-radius:32px;overflow:hidden;}
 .sb-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
 .sb-avatar-badge{position:absolute;bottom:-10px;right:-10px;width:52px;height:52px;background:var(--dourado);border-radius:50%;display:flex;align-items:center;justify-content:center;border:4px solid var(--branco);}
@@ -179,6 +181,10 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;border-top:1px
 .sb-dif-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;}
 @media(min-width:840px){.sb-dif-grid{grid-template-columns:minmax(0,850px) minmax(0,190px);justify-content:center;gap:40px;}}
 .sb-dif-cloud{position:relative;width:190px;height:190px;flex-shrink:0;}
+@media(max-width:839px){
+  .sb-dif-grid > div:first-child{text-align:center;}
+  .sb-dif-cloud{margin:0 auto;}
+}
 .sb-dif-chip{position:absolute;background:var(--branco);border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);}
 .sb-dif-chip svg{color:var(--azul);width:46%;height:46%;}
 .sb-dif-chip--gold svg{color:var(--dourado-escuro);}

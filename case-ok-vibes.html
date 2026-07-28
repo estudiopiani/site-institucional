@@ -136,6 +136,10 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;border-top:1px
 .ck-img img{width:100%;height:100%;object-fit:cover;display:block;}
 .ck-img svg{width:15%;height:15%;}
 .ck-badge{position:absolute;bottom:-14px;left:-14px;background:var(--branco);border-radius:14px;padding:10px 14px;box-shadow:var(--shadow-md);white-space:nowrap;display:flex;align-items:center;gap:8px;}
+@media(max-width:839px){
+  .ck-resultado-grid > div:first-child{text-align:center;}
+  .ck-badge{left:50%;transform:translateX(-50%);}
+}
 .ck-badge svg{width:16px;height:16px;color:var(--azul);flex-shrink:0;margin-top:2px;}
 .ck-badge strong{font-family:var(--font-title);font-size:14px;color:var(--azul);font-weight:700;}
 

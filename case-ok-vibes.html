@@ -50,6 +50,12 @@ h1,h2,h3{font-family:var(--font-title);font-weight:700;color:var(--profundo);let
 header.site-header{position:sticky;top:0;z-index:50;background:var(--branco);border-bottom:1px solid var(--ink-100);}
 @media(max-width:839px){header.site-header{position:static;}}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,4vw,48px);max-width:1200px;margin:0 auto;gap:16px;}
+@media(max-width:899px){
+  .header-inner{display:grid;grid-template-columns:40px 1fr 40px;}
+  .header-spacer{display:block;grid-column:1;}
+  .logo{grid-column:2;justify-self:center;}
+  .mobile-toggle{grid-column:3;justify-self:end;}
+}
 .header-spacer{display:none;}
 @media(min-width:900px){.header-inner{display:grid;grid-template-columns:1fr auto 1fr;}
 .header-spacer{display:block;}}

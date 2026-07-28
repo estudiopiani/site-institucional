@@ -132,6 +132,11 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;border-top:1px
 @media(max-width:839px){.mt-abertura-grid > div:first-child{text-align:center;}}
 @media(min-width:840px){.mt-abertura-grid{grid-template-columns:minmax(0,740px) minmax(0,300px);justify-content:center;gap:40px;}}
 .mt-h1{font-size:clamp(28px,3.6vw,40px);font-weight:700;line-height:1.2;color:var(--profundo);letter-spacing:-.02em;margin-bottom:18px;}
+@media(max-width:839px){.mt-h1{font-size:32px;}}
+.word-mobile{display:inline;}
+@media(min-width:840px){.word-mobile{display:none;}}
+.word-desktop{display:none;}
+@media(min-width:840px){.word-desktop{display:inline;}}
 .mt-h1 .accent{color:var(--azul);}
 .mt-timeline{display:flex;flex-direction:column;gap:20px;position:relative;padding-left:8px;}
 .mt-timeline::before{content:"";position:absolute;left:35px;top:42px;height:8px;width:2px;background:var(--areia-escura);}
@@ -203,7 +208,7 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;border-top:1px
     <div class="mt-abertura-grid">
       <div>
         <div class="mt-eyebrow mt-eyebrow--dourado">Como trabalhamos</div>
-        <h1 class="mt-h1">Diagnóstico, plano e execução<br><span class="accent">nessa ordem</span></h1>
+        <h1 class="mt-h1">Diagnóstico, plano e <span class="word-desktop">execução</span><br class="brk"><br class="brk-mobile"><span class="accent"><span class="word-mobile">execução </span>nessa ordem</span></h1>
         <p class="mt-body">Quando o faturamento trava, o instinto é olhar pro anúncio. Mas o problema<br class="brk"> quase nunca está só no tráfego pago. Na Piani, o crescimento passa por três etapas,<br class="brk"> trabalhando sempre os cinco pilares que decidem se uma marca autoral cresce<br class="brk"> ou fica presa no mesmo nível de faturamento.</p>
       </div>
       <div class="mt-timeline">

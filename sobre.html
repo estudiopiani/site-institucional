@@ -157,9 +157,16 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;border-top:1px
 /* Fundador */
 .sb-fundador{background:var(--branco);padding:clamp(48px,7vw,84px) 0;}
 .sb-fundador-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;}
-@media(min-width:840px){.sb-fundador-grid{grid-template-columns:minmax(0,340px) minmax(0,684px);justify-content:center;gap:56px;}}
+@media(min-width:840px){.sb-fundador-grid{grid-template-columns:minmax(0,340px) minmax(0,684px);justify-content:center;column-gap:56px;row-gap:0;}
+  .sb-avatar-wrap{grid-column:1;grid-row:1/3;}
+  .sb-fundador-heading{grid-column:2;grid-row:1;}
+  .sb-fundador-body{grid-column:2;grid-row:2;}
+}
 .sb-avatar-wrap{position:relative;width:100%;max-width:340px;aspect-ratio:1/1;margin:0 auto;}
-@media(max-width:839px){.sb-fundador-grid > div:last-child{text-align:center;order:-1;}}
+@media(max-width:839px){
+  .sb-fundador-heading{text-align:center;order:-1;}
+  .sb-fundador-body{text-align:center;}
+}
 .sb-avatar{width:100%;height:100%;aspect-ratio:1/1;background:var(--areia);border-radius:32px;overflow:hidden;}
 .sb-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
 .sb-avatar-badge{position:absolute;bottom:-10px;right:-10px;width:52px;height:52px;background:var(--dourado);border-radius:50%;display:flex;align-items:center;justify-content:center;border:4px solid var(--branco);}
@@ -257,12 +264,12 @@ footer.site-footer{background:var(--profundo);padding:56px 0 28px;border-top:1px
         <div class="sb-avatar"><img src="assets/team/carlos-andre.jpg" alt="Carlos André, fundador da Piani"></div>
         <div class="sb-avatar-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a2.5 2.5 0 0 1 2.5 2.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.02-4.63 2.5 2.5 0 0 1 .34-4.94 2.5 2.5 0 0 1 1.32-4.24A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2a2.5 2.5 0 0 0-2.5 2.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.02-4.63 2.5 2.5 0 0 0-.34-4.94 2.5 2.5 0 0 0-1.32-4.24A2.5 2.5 0 0 0 14.5 2Z"/></svg></div>
       </div>
-      <div>
+      <div class="sb-fundador-heading">
         <div class="sb-eyebrow sb-eyebrow--azul">Quem está por trás</div>
         <h2 class="sb-h2">Carlos André</h2>
         <p class="sb-role">Gestor de Marketing Digital</p>
-        <p class="sb-body">Somos fruto da sua experiência:<br class="brk-mobile"> mais de 10 anos de prática planejando, testando e corrigindo rápido estratégias de marketing digital para marcas autorais de verdade. Foi esse jeito de trabalhar que virou o método que usamos até hoje — e do qual temos muito orgulho.</p>
       </div>
+        <p class="sb-body sb-fundador-body">Somos fruto da sua experiência:<br class="brk-mobile"> mais de 10 anos de prática planejando, testando e corrigindo rápido estratégias de marketing digital para marcas autorais de verdade. Foi esse jeito de trabalhar que virou o método que usamos até hoje — e do qual temos muito orgulho.</p>
     </div>
   </div>
 </section>
